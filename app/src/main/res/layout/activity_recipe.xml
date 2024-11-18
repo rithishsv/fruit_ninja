@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvRecipePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select ingredients to get recipes:" />
+
+    <Button
+        android:id="@+id/btnShowInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Inventory"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center" />
+
+    <!-- RecyclerView for displaying recipes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
+
+    <!-- RecyclerView for displaying ingredients with a LinearLayoutManager -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layoutManager="LinearLayoutManager" />
+
+    <!-- Button to get recipes based on selected ingredients -->
+    <Button
+        android:id="@+id/btnGetRecipes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Recipes" />
+
+    <!-- TextView to display recipes -->
+    <TextView
+        android:id="@+id/tvRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipes will appear here" />
+
+</LinearLayout>

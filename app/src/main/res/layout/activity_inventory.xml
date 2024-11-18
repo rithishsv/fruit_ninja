@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <!-- EditText for entering a new item -->
+    <EditText
+        android:id="@+id/etNewItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter new item"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:backgroundTint="#6200EE"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_edittext" />
+
+    <!-- Button to add the new item to the list -->
+    <Button
+        android:id="@+id/btnAddNewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:padding="10dp"
+        android:text="Add Item"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ListView for displaying unchecked items -->
+    <ListView
+        android:id="@+id/lvUncheckedItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="@drawable/rounded_listview" />
+
+</LinearLayout>
